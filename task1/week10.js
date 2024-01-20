@@ -1,36 +1,59 @@
 //Задание 1
 // Напишите функцию firstFunction, которая будет выводить в консоль переменную first.
+
 let first = 8;
 
 function firstFunction() {
-	return first;
+	console.log(`Задание №1: значение переменной first: ${first}`);
 }
 
-console.log(firstFunction());
+const firstSection = document.querySelector('.first-section');
+
+function createButton() {
+  let button = document.createElement('button');
+  button.className = 'button-1';
+  button.style = `
+  width: 200px;
+  height: 30px;
+  border: 1px solid gray";
+  border-radius: 3px;
+  `;
+  button.innerText = 'Нажми меня';
+  firstSection.append(button);
+  button.addEventListener('click', firstFunction);
+}
+
+window.addEventListener('load', createButton);
 
 //Задание 2
 // Напишите функцию sum, которая принимает два параметра a и b, складывает их и выводит в консоль результат.
 let a = 5;
 let b = 3;
 
-function sum(a, b) {}
+function sum(a, b) {
+  return a + b;
+}
 
-console.log(sum(a, b));
+console.log(`Задание №2: результат вызова функции: ${sum(a, b)}`);
 
 //Задание 3
 // Напишите функцию multiply, которая принимает два параметра x и y, перемножает их и выводит в консоль результат.
 let x = 4;
 let y = 2;
 
-function multiply(x, y) {}
+function multiply(x, y) {
+  return x * y;
+}
 
-console.log(multiply(x, y));
+console.log(`Задание №3: результат вызова функции: ${multiply(x, y)}`);
 
 //Задание 4
 // Напишите функцию greet, которая принимает один параметр firstName и выводит в консоль приветствие с этим именем.
 let firstName = 'Alice';
 
-function greet(firstName) {}
+function greet(firstName) {
+  console.log(`Задание №4: Привет, ${firstName}!`);
+}
 
 greet(firstName);
 
