@@ -18,7 +18,7 @@ function showNext(i) {
 }
 
 function showPrev(i) {
-  i = cats[0];
+  i = cats[i];
   imgContainer.style.backgroundImage = '';
   imgContainer.style.backgroundImage = `url(${cats[i-1].src})`;
   i = cats[i-1];
