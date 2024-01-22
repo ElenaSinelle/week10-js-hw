@@ -9,20 +9,20 @@ window.addEventListener('load', function() {
   imgContainer.style.backgroundImage = `url(${cats[0].src})`;
 })
 
-function showNext(i) {
-  i = cats[i];
+let cat = 0;
+
+function showNext() {
+  cat++;
+  if (cat == 4) cat = 0;
   imgContainer.style.backgroundImage = '';
-  imgContainer.style.backgroundImage = `url(${cats[i+1].src})`;
-  i = cats[i+1];
-  if (i == 3) i = 0;
+  imgContainer.style.backgroundImage = `url(${cats[cat].src})`;
 }
 
-function showPrev(i) {
-  i = cats[i];
+function showPrev() {
+  cat--;
+  if (cat == -1) cat = 3;
   imgContainer.style.backgroundImage = '';
-  imgContainer.style.backgroundImage = `url(${cats[i-1].src})`;
-  i = cats[i-1];
-  if (i == -1) i = 3;
+  imgContainer.style.backgroundImage = `url(${cats[cat].src})`;
  }
 
 btnNext.addEventListener('click', showNext);
