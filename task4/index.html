@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Задание 4</title>
+    <link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+    <div class="wrapper">
+      <h3>Вычисление стоимости покупки</h3>
+      <div class="image-container">
+        <div class="item-1">
+          <img src="assets/toy-1.jpeg" alt="toy car" class="img image-1">
+          <p>Стоимость: <span class="item-1-price">500</span> рублей</p>
+          <label for="item-1-qty">Введите количество товара: </label>
+          <input type="number" class="item-1-qty" id="item-1-qty">
+        </div>
+
+        <div class="item-2">
+          <img src="assets/toy-2.jpeg" alt="toy owl" class="img image-2">
+          <p>Стоимость: <span class="item-2-price">800</span> рублей</p>
+          <label for="item-2-qty">Введите количество товара: </label>
+          <input type="number" class="item-2-qty" id="item-2-qty">
+        </div>
+      </div>
+
+      <button class="btn calc-btn">Расчитать общую стоимость</button>
+
+      <div class="total-price-container">
+        <p>Общая стоимость вашего заказа: <span class="total-price-calculated"></span> рублей</p>
+      </div>
+
+    </div>
+		<script src="script.js"></script>
+	</body>
+</html>
