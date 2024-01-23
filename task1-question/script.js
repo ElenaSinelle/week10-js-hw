@@ -1,7 +1,6 @@
 'use strict'
-//ситуация: я создаю кнопку
-
 const firstSection = document.querySelector('.first-section');
+let first = 8;
 
 function createButton() {
   let button = document.createElement('button');
@@ -16,20 +15,21 @@ function createButton() {
   firstSection.append(button);
 }
 
-window.addEventListener('load', createButton);
-
-// и теперь хочу получить её, повесить на неё слушатель, чтобы при нажатии срабатывала функция firstFunction()
-let first = 8;
+function createDiv() {
+  let div = document.createElement('div');
+  div.className = 'message-div';
+  div.textContent = `Задание №1: значение переменной first: ${first}`;
+  firstSection.append(div);
+}
 
 function firstFunction() {
 	console.log(`Задание №1: значение переменной first: ${first}`);
+  createDiv();
 }
 
-//вопрос: почему я не могу получить firstButton? хотя в инспекторе эта кнопка есть
-
-let firstButton = document.querySelector('.button-1');
-console.log(firstButton); // выводит null
-
-//слушатель соответственно тоже не работает. он работает, только если его поместить внутрь функуии createButton()
-//почему так происходит?
-firstButton.addEventListener('click', firstFunction);
+window.addEventListener('load', () => {
+  createButton();
+  let firstButton = document.querySelector('.button-1');
+  console.log(firstButton);
+  firstButton.addEventListener('click', firstFunction);
+});
