@@ -1,0 +1,41 @@
+.wrapper {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.wrapper h3 {
+  margin: 0;
+}
+
+.image-container {
+  width: 20rem;
+  height: 20rem;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.button-container {
+  display: flex;
+  gap: 4rem;
+}
+
+.btn {
+  width: 10rem;
+  height: 2.5rem;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.7s ease;
+}
+
+.btn:hover,
+.btn:active {
+  transform: scale(0.9);
+}
